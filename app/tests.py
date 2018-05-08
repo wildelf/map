@@ -19,19 +19,22 @@ if __name__ == '__main__':
   location = GetOuterIP()
   print(location)
 
-# def get_location():
-#     location = []
-#     url = 'http://api.map.baidu.com/location/ip'
-#     par = {'ak':'YN2ajqOcsFnsZI2qbsYulnL6u9iU9dhF'}
-#     my_ip_info = requests.get(url)
+# AK = 'YN2ajqOcsFnsZI2qbsYulnL6u9iU9dhF'
+#
+# def get_location(ak):
+#     location = {}
+#     my_ip_info = requests.get('https://api.map.baidu.com/location/ip?ak=%s'%ak)
+#     print(my_ip_info.text['content']['address_detail'])
 #     info_dict = my_ip_info.json()
-#     print(my_ip_info)
-#     location.append(info_dict['x'])
-#     location.append(info_dict['y'])
+#     location['longitude'] = round(float(info_dict['content']['point']['y'])/100000,2)
+#     location['latitude'] = round(float(info_dict['content']['point']['x'])/100000,2)
+#
 #     return location
 #
 #
-#     if __name__ == '__main__':
-#       location = get_location()
-#       print(location)
+# if __name__ == '__main__':
+#     location = get_location(AK)
+#     print(location)
+
+
 
